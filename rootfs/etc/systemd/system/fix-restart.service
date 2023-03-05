@@ -1,0 +1,13 @@
+[Unit]
+Description=Fixes restart
+DefaultDependencies=no
+ConditionPathIsReadWrite=/usr
+ConditionPathExists=/usr/share/polkit-1/actions/org.freedesktop.consolekit.system.restart-multiple-users
+
+[Service]
+Type=oneshot
+RemainAfterExit=no
+ExecStart=/bin/rm -f /usr/share/polkit-1/actions/org.freedesktop.consolekit.system.restart-multiple-users
+
+[Install]
+WantedBy=sysinit.target
