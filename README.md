@@ -16,8 +16,6 @@ Find us at:
 
 ## Usage
 
-![image](https://user-images.githubusercontent.com/83867734/222000470-f65a5ff3-90ea-435b-b30f-0143c668cbcd.png)
-
 Athena OS container has been developed in order to be run also by podman. The choice to use podman comes from its advantages over docker, one of most important: security.
 
 According to your preference, install `docker` and `docker-compose` packages or `podman` package for your Linux environment.
