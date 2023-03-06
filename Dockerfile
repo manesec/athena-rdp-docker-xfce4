@@ -1,4 +1,4 @@
-FROM athenaos/base
+FROM athenaos/base:latest
 
 ENV LANG=en_US.UTF-8
 ENV TZ=Europe/Zurich
@@ -47,26 +47,14 @@ RUN pacman -Syu --noconfirm --needed adobe-source-han-sans-cn-fonts adobe-source
 ###                    UTILITIES                    ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed asciinema bashtop bat bc cmatrix cowsay cron downgrade dunst eog espeakup figlet file-roller fortune-mod git gnome-keyring imagemagick jdk-openjdk jq lolcat lsd neofetch nyancat openbsd-netcat openvpn orca p7zip paru pfetch python-pywhat reflector sl textart tidy tk tmux toilet tree ufw unzip vim vnstat wget which xclip xcp xmlstarlet zoxide
+RUN pacman -Syu --noconfirm --needed asciinema bashtop bat bc cmatrix cowsay cron downgrade dunst eog espeakup figlet file-roller fortune-mod git gnome-keyring imagemagick jdk-openjdk jq lolcat lsd neofetch nyancat openbsd-netcat openvpn orca p7zip paru pfetch powershell python-pywhat reflector sl textart tidy tk tmux toilet tree ufw unzip vim vnstat wget which xclip xcp xmlstarlet zoxide
 RUN pacman -Syu --noconfirm --needed openssl shellinabox
-
-#######################################################
-###                   CHAOTIC AUR                   ###
-#######################################################
-
-RUN pacman -Syu --noconfirm --needed chaotic-keyring chaotic-mirrorlist powershell
-
-#######################################################
-###                    BLACKARCH                    ###
-#######################################################
-
-RUN pacman -Syu --noconfirm --needed blackarch-keyring blackarch-mirrorlist
 
 #######################################################
 ###                ATHENA REPOSITORY                ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed athena-application-config athena-keyring athena-nvchad athena-welcome athena-zsh figlet-fonts htb-tools myman nist-feed superbfetch-git toilet-fonts
+RUN pacman -Syu --noconfirm --needed athena-application-config athena-nvchad athena-welcome athena-zsh figlet-fonts htb-tools myman nist-feed superbfetch-git toilet-fonts
 
 #######################################################
 ###                    GUI TOOLS                    ###
@@ -143,7 +131,6 @@ RUN systemctl enable fix-colord.service
 
 RUN systemd-machine-id-setup
 RUN xrdp-keygen xrdp /etc/xrdp/rsakeys.ini
-RUN athena-motd -f /etc/issue
 
 # Create and configure user
 RUN groupadd sudo && \
