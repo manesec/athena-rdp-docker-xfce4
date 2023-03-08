@@ -2,7 +2,6 @@ FROM athenaos/base:latest
 
 ENV LANG=en_US.UTF-8
 ENV TZ=Europe/Zurich
-ENV PATH="/usr/bin:${PATH}"
 ENV PUSER=athena
 ENV PUID=1000
 
@@ -20,10 +19,6 @@ RUN echo "${TZ}" > /etc/timezone && \
   ln -sf "/usr/share/zoneinfo/${TZ}" /etc/localtime
 
 RUN pacman -Syu --noconfirm
-
-## Need for creating /usr/share/polkit-1/actions/org.freedesktop.consolekit.policy file
-RUN pacman -Syu --noconfirm consolekit
-RUN pacman -Rd --nodeps --noconfirm polkit-consolekit
 
 #######################################################
 ###                  BASIC PACKAGES                 ###
@@ -131,11 +126,18 @@ RUN systemctl enable fix-colord.service
 
 RUN systemd-machine-id-setup
 RUN xrdp-keygen xrdp /etc/xrdp/rsakeys.ini
+RUN sed -i "s/<allow_any>auth_admin_keep<\/allow_any>/<allow_any>yes<\/allow_any>/g" /usr/share/polkit-1/actions/org.freedesktop.login1.policy
+
+# /etc/skel editing
+RUN sed -i 's/\/usr\/bin\/bash;/\/usr\/bin\/zsh;/g' /usr/share/athena-application-config/dconf-shell.ini
+RUN sed -i 's/\/usr\/bin\/bash;/\/usr\/bin\/zsh;/g' /etc/skel/.local/share/applications/*
+RUN sed -i 's/Bash/Zsh/g' /etc/skel/.local/share/applications/*
+RUN sed -i "s/source ~\/.bash_aliases/source ~\/.bash_aliases\nsource ~\/.bashrc/g" /etc/skel/.zshrc
 
 # Create and configure user
 RUN groupadd sudo && \
   useradd  \
-  --shell /bin/bash \
+  --shell /bin/zsh \
   -g users \
   -G sudo,lp,network,power,sys,wheel \
   --badname \
@@ -145,9 +147,6 @@ RUN groupadd sudo && \
 RUN echo "$PUSER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$PUSER
 RUN chmod 044 /etc/sudoers.d/$PUSER
 RUN echo -e "$PUSER\n$PUSER" | passwd "$PUSER"
-RUN sed -i "/export SHELL=/c\export SHELL=\$(which zsh)" /home/$PUSER/.bashrc
-RUN echo -e "/bin/zsh\n/usr/bin/zsh" >> /etc/shells
-RUN echo "exec zsh" >> /home/$PUSER/.bashrc
 
 # Expose SSH and RDP ports.
 EXPOSE 22

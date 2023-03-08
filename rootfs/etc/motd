@@ -13,11 +13,11 @@
 [01;32m---------------------------------------------------------------
 [01;33m    KERNEL [01;32m:[0m 6.2.2-zen1-1-zen x86_64                                 
 [01;32m       CPU [01;32m:[0m Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz                                          
-[01;36m    MEMORY [01;32m:[0m 8491 MB / 15833 MB - 31.29% (Used)              
+[01;36m    MEMORY [01;32m:[0m 11203 MB / 15833 MB - 22.62% (Used)              
 [01;32m---------------------------------------------------------------
-[01;33m  LOAD AVG [01;32m:[0m 0.47, 0.53, 1.30		          
-[01;32m    UPTIME [01;32m:[0m 0 days 4 hours 58 minutes 17 seconds 
-[01;36m    PACMAN [01;32m:[0m 16 packages can be updated               
+[01;33m  LOAD AVG [01;32m:[0m 0.54, 1.38, 2.33		          
+[01;32m    UPTIME [01;32m:[0m 0 days 5 hours 53 minutes 26 seconds 
+[01;36m    PACMAN [01;32m:[0m 22 packages can be updated               
 [01;31m     USERS [01;32m:[0m 1 users logged in 	          
 [01;32m---------------------------------------------------------------
   [0m Please do not share your login and use[01;32m sudo[0m for[01;31m root[0m access 
