@@ -74,7 +74,7 @@ sudo docker-compose run athena-rdp
 #### docker run
 
 ```bash
-docker run --ti
+docker run --ti \
   --name athena-rdp \
   --cap-add CAP_SYS_ADMIN \
   --cap-add IPC_LOCK \
