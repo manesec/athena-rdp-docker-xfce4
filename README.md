@@ -128,6 +128,12 @@ podman run -ti \
   --restart unless-stopped \
   docker.io/athenaos/rdp:latest
 ```
+or
+```
+podman run -ti --name athena-rdp --cap-add NET_RAW --cap-add NET_ADMIN --device /dev/net/tun --restart unless-stopped docker.io/athenaos/rdp:latest
+```
+
+Podman will automatically replicate `/etc/hosts` and `/etc/hostname` files of your host. For preventing this, add `--no-hosts` argument to the `podman run` command above.
 
 In case you exit the container and need to re-enter, run:
 ```
