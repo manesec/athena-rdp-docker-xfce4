@@ -14,13 +14,13 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     container:
-      image: blackarchlinux/blackarch:base-devel
+      image: archlinux/base-devel
 
     steps:
       - uses: actions/checkout@v3
       
       - name: Install dependencies
-        run: pacman -Sy --noconfirm --needed docker
+        run: pacman -Sy --noconfirm --needed bash docker
 
       - name: Build rdp
         run: |
