@@ -24,7 +24,7 @@ jobs:
 
       - name: Build rdp
         run: |
-          docker build . --file ./Dockerfile --tag docker.io/athenaos/$RDP_IMG
+          docker build --no-cache . --file ./Dockerfile --tag docker.io/athenaos/$RDP_IMG
 
       - name: Log into registry
         uses: docker/login-action@v2
