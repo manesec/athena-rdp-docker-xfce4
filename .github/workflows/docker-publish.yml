@@ -14,19 +14,13 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     container:
-      image: blackarchlinux/blackarch:base-devel
+      image: athenaos/base-devel
 
     steps:
       - uses: actions/checkout@v3
       
       - name: Install dependencies
-        run: pacman -Sy --noconfirm --needed bash coreutils docker sed
-        
-      - name: echo $PATH environment variable
-        run: echo "$PATH"
-        
-      - name: echo sh and tail commands
-        run: echo "$(which sh) $(which tail)"
+        run: pacman -Sy --noconfirm --needed docker
 
       - name: Build rdp
         run: |
