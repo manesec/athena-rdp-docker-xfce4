@@ -11,11 +11,10 @@ env:
 jobs:
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
-#  publish:
-  build_container:
+  publish:
     runs-on: ubuntu-latest
     container:
-      image: athenaos/base-devel
+      image: athenaos/base-devel:latest
 
     steps:
       - uses: actions/checkout@v3
