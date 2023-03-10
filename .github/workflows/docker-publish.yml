@@ -11,7 +11,8 @@ env:
 jobs:
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
-  publish:
+#  publish:
+  build_container:
     runs-on: ubuntu-latest
     container:
       image: athenaos/base-devel
