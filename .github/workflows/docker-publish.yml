@@ -22,8 +22,11 @@ jobs:
       - name: Install dependencies
         run: pacman -Sy --noconfirm --needed bash coreutils docker sed
         
-      - name: Set $PATH environment variable
+      - name: echo $PATH environment variable
         run: echo "$PATH"
+        
+      - name: echo sh and tail commands
+        run: echo "$(which sh) $(which tail)"
 
       - name: Build rdp
         run: |
