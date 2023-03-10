@@ -23,7 +23,7 @@ jobs:
         run: pacman -Sy --noconfirm --needed bash coreutils docker
         
       - name: Set $PATH environment variable
-        run: export PATH=$PATH:/usr/bin/tail
+        run: echo "$PATH"
 
       - name: Build rdp
         run: |
