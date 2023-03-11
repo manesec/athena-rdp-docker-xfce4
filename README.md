@@ -113,7 +113,7 @@ For deleting the container, run:
 docker container rm athena-rdp
 ```
 
-### Podman
+### Podman (Untested)
 
 You can run the container by `podman run`.
 
@@ -153,13 +153,6 @@ For deleting the container, run:
 ```
 podman container rm athena-rdp
 ```
-
-### Default Credentials
-
-```
-athena:athena
-```
-
 
 ### Default Credentials
 
