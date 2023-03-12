@@ -124,6 +124,7 @@ COPY rootfs/ /
 # See: https://unix.stackexchange.com/a/581353
 RUN systemctl enable fix-colord.service
 
+RUN echo "athena-motd" >> /etc/zsh/zprofile
 RUN systemd-machine-id-setup
 RUN xrdp-keygen xrdp /etc/xrdp/rsakeys.ini
 RUN sed -i "s/<allow_any>auth_admin_keep<\/allow_any>/<allow_any>yes<\/allow_any>/g" /usr/share/polkit-1/actions/org.freedesktop.login1.policy
