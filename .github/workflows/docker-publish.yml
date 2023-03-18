@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Clean pacman cache
+      - name: Clear pacman cache
         run: yes | pacman -Scc
       
       - name: Install dependencies
