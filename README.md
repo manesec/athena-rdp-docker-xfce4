@@ -96,7 +96,7 @@ docker run -ti --name athena-rdp --cap-add CAP_SYS_ADMIN --cap-add IPC_LOCK --ca
 
 In case you exit the container and need to re-enter, run:
 ```
-docker exec --user athena -ti athena-rdp /bin/bash
+docker exec --user athena -ti athena-rdp /bin/zsh
 ```
 In case the container is not running, run:
 ```
@@ -137,7 +137,7 @@ Podman will automatically replicate `/etc/hosts` and `/etc/hostname` files of yo
 
 In case you exit the container and need to re-enter, run:
 ```
-podman exec -ti athena-rdp /bin/bash
+podman exec --user athena -ti athena-rdp /bin/zsh
 ```
 In case the container is not running, run:
 ```
