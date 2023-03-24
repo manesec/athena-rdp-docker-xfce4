@@ -96,7 +96,7 @@ docker run -ti --name athena-rdp --cap-add CAP_SYS_ADMIN --cap-add IPC_LOCK --ca
 
 In case you exit the container and need to re-enter, run:
 ```
-docker exec -ti athena-rdp /bin/bash
+docker exec --user athena -ti athena-rdp /bin/bash
 ```
 In case the container is not running, run:
 ```
