@@ -24,7 +24,7 @@ RUN pacman -Syu --noconfirm
 ###                  BASIC PACKAGES                 ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed accountsservice btrfs-progs dialog gcc inetutils make man-db man-pages most nano nbd net-tools netctl pv rsync sudo timelineproject-hg xdg-user-dirs
+RUN pacman -Syu --noconfirm --needed accountsservice btrfs-progs dialog gcc inetutils make man-db man-pages most nano nbd net-tools netctl pv rsync sudo timelineproject-hg vi xdg-user-dirs
 
 #######################################################
 ###                   DEPENDENCIES                  ###
@@ -42,7 +42,7 @@ RUN pacman -Syu --noconfirm --needed adobe-source-han-sans-cn-fonts adobe-source
 ###                    UTILITIES                    ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed asciinema bashtop bat bc cmatrix cowsay cron downgrade dunst eog espeakup figlet file-roller fortune-mod git gnome-keyring imagemagick jdk-openjdk jq lolcat lsd neofetch nyancat openbsd-netcat openvpn orca p7zip paru pfetch powershell-bin python-pywhat reflector sl textart tidy tk tmux toilet tree ufw unzip vim vnstat wget which xclip xcp xmlstarlet zoxide
+RUN pacman -Syu --noconfirm --needed asciinema bash-completion bashtop bat bc cmatrix cowsay cron downgrade dunst eog espeakup figlet file-roller fortune-mod git gnome-keyring imagemagick jdk-openjdk jq lib32-glibc lolcat lsd nano-syntax-highlighting ncdu neofetch nyancat openbsd-netcat openvpn orca p7zip paru pfetch powershell-bin python-pywhat reflector sl textart tidy tk tmux toilet tree ufw unzip vim vnstat wget which xclip xcp xmlstarlet zoxide
 RUN pacman -Syu --noconfirm --needed openssl shellinabox
 
 #######################################################
@@ -55,7 +55,7 @@ RUN pacman -Syu --noconfirm --needed athena-application-config athena-nvchad ath
 ###                    GUI TOOLS                    ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed alacritty bless chatgpt-desktop-bin code discord gnome-characters gnome-control-center gnome-menus gnome-shell-extensions gnome-themes-extra gnome-tweaks gtk-engine-murrine hexedit kitty nautilus networkmanager networkmanager-openvpn octopi polkit-gnome reflector xdg-desktop-portal xdg-desktop-portal-gnome athena-blue-eyes-theme athena-firefox-config athena-pentoxic-menu athena-pwnage-menu athena-theme-tweak athena-vscode-themes athena-welcome gnome-shell-extension-appindicator-git gnome-shell-extension-desktop-icons-ng gnome-shell-extension-fly-pie-git gnome-shell-extension-pop-shell-git gnome-shell-extension-ubuntu-dock-git
+RUN pacman -Syu --noconfirm --needed alacritty bless chatgpt-desktop-bin code discord_arch_electron gnome-characters gnome-control-center gnome-menus gnome-shell-extensions gnome-themes-extra gnome-tweaks gtk-engine-murrine hexedit kitty nautilus networkmanager networkmanager-openvpn octopi polkit-gnome reflector xdg-desktop-portal xdg-desktop-portal-gnome athena-blue-eyes-theme athena-firefox-config athena-pentoxic-menu athena-pwnage-menu athena-theme-tweak athena-vscode-themes athena-welcome gnome-shell-extension-appindicator-git gnome-shell-extension-desktop-icons-ng gnome-shell-extension-fly-pie-git gnome-shell-extension-pop-shell-git gnome-shell-extension-ubuntu-dock-git
 
 # Install xrdp and xorgxrdp from AUR.
 # - Unlock gnome-keyring automatically for xrdp login.
