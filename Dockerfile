@@ -137,7 +137,7 @@ RUN xrdp-keygen xrdp /etc/xrdp/rsakeys.ini
 RUN sed -i "s/<allow_any>auth_admin_keep<\/allow_any>/<allow_any>yes<\/allow_any>/g" /usr/share/polkit-1/actions/org.freedesktop.login1.policy
 
 # /etc/skel editing
-RUN sed -i 's/\/usr\/bin\/bash/\/usr\/bin\/zsh/g' /usr/share/athena-application-config/dconf-shell.ini
+RUN sed -i 's/\/usr\/bin\/bash/\/usr\/bin\/zsh/g' /usr/share/athena-gnome-config/dconf-shell.ini
 RUN sed -i 's/\/usr\/bin\/bash/\/usr\/bin\/zsh/g' /etc/skel/.local/share/applications/*
 RUN sed -i 's/Bash/Zsh/g' /etc/skel/.local/share/applications/*
 RUN sed -i "s/source ~\/.bash_aliases/source ~\/.bash_aliases\nsource ~\/.bashrc/g" /etc/skel/.zshrc
