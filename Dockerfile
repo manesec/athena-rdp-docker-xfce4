@@ -36,7 +36,7 @@ RUN pacman -Syu --noconfirm --needed exa python-libtmux python-libtmux sassc hwl
 ###                      FONTS                      ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-kr-fonts gnu-free-fonts nerd-fonts-jetbrains-mono ttf-jetbrains-mono
+RUN pacman -Syu --noconfirm --needed adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-kr-fonts gnu-free-fonts ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 
 #######################################################
 ###                    UTILITIES                    ###
@@ -49,13 +49,13 @@ RUN pacman -Syu --noconfirm --needed openssl shellinabox
 ###                ATHENA REPOSITORY                ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed athena-application-config athena-nvchad athena-welcome athena-zsh figlet-fonts htb-tools myman nist-feed superbfetch-git toilet-fonts
+RUN pacman -Syu --noconfirm --needed athena-nvchad athena-system-config athena-welcome athena-zsh figlet-fonts htb-tools myman nist-feed superbfetch-git toilet-fonts
 
 #######################################################
 ###                    GUI TOOLS                    ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed alacritty bless chatgpt-desktop-bin code discord_arch_electron gnome-characters gnome-control-center gnome-menus gnome-shell-extensions gnome-themes-extra gnome-tweaks gtk-engine-murrine hexedit kitty nautilus networkmanager networkmanager-openvpn octopi polkit-gnome reflector xdg-desktop-portal xdg-desktop-portal-gnome athena-blue-eyes-theme athena-firefox-config athena-pentoxic-menu athena-pwnage-menu athena-theme-tweak athena-vscode-themes athena-welcome gnome-shell-extension-appindicator-git gnome-shell-extension-desktop-icons-ng gnome-shell-extension-fly-pie-git gnome-shell-extension-pop-shell-git gnome-shell-extension-ubuntu-dock-git
+RUN pacman -Syu --noconfirm --needed athena-alacritty-config athena-gnome-config athena-kitty-config athena-neofetch-config athena-powershell-config athena-tmux-config athena-vim-config athena-vscodium-themes bless chatgpt-desktop-bin discord_arch_electron gnome-characters gnome-control-center gnome-menus gnome-shell-extensions gnome-themes-extra gnome-tweaks gtk-engine-murrine hexedit nautilus networkmanager networkmanager-openvpn octopi polkit-gnome reflector xdg-desktop-portal xdg-desktop-portal-gnome athena-blue-eyes-theme athena-firefox-config athena-theme-tweak athena-welcome gnome-shell-extension-appindicator-git gnome-shell-extension-desktop-icons-ng gnome-shell-extension-fly-pie-git gnome-shell-extension-pop-shell-git gnome-shell-extension-ubuntu-dock-git
 
 # Install xrdp and xorgxrdp from AUR.
 # - Unlock gnome-keyring automatically for xrdp login.
