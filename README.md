@@ -163,7 +163,7 @@ athena:athena
 ## Connect to the desktop by RDP
 
 You should now be able to access your full-featured GNOME desktop using
-the RDP client of your choice. For example, using [Remmina](https://remmina.org):
+the RDP client of your choice. For example, using [Remmina](https://remmina.org) along with the install of `freerdp` package:
 
 ```
 remmina -c rdp://127.0.0.1:23389
