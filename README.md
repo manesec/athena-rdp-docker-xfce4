@@ -160,6 +160,18 @@ podman container rm athena-rdp
 athena:athena
 ```
 
+### Setting HTB API Token
+
+Once you retrieved your HTB API Token from your Hack The Box website profile settings, you can set the HTB API Token in two ways:
+* By connecting by RDP to the GUI as explained in the next section, open terminal and run `htb-update` (or clicking **HTB Update** button in Athena Welcome)
+* If you don't want to connect to the GUI environment, run the following commands:
+  ```
+  sudo mkdir -p /run/secrets
+  sudo nano /run/secrets/htb-api
+  <store your HTB API Token in htb-api file and save it>
+  htb-play
+  ```
+  
 ## Connect to the desktop by RDP
 
 You should now be able to access your full-featured GNOME desktop using
