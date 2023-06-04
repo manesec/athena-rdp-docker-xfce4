@@ -141,6 +141,7 @@ RUN sed -i 's/\/usr\/bin\/bash/\/usr\/bin\/zsh/g' /usr/share/athena-gnome-config
 RUN sed -i 's/\/usr\/bin\/bash/\/usr\/bin\/zsh/g' /etc/skel/.local/share/applications/*
 RUN sed -i 's/Bash/Zsh/g' /etc/skel/.local/share/applications/*
 RUN sed -i "s/source ~\/.bash_aliases/source ~\/.bash_aliases\nsource ~\/.bashrc/g" /etc/skel/.zshrc
+RUN sed -iz "s/if \[\[ \$1 != no-repeat-flag \]\]; then\n  neofetch\nfi/#if \[\[ \$1 != no-repeat-flag \]\]; then\n#  neofetch\n#fi/g" /etc/skel/.zshrc
 
 # Create and configure user
 RUN groupadd sudo && \
