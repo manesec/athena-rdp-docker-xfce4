@@ -49,13 +49,13 @@ RUN pacman -Syu --noconfirm --needed openssl shellinabox
 ###                ATHENA REPOSITORY                ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed athena-nvchad athena-powershell-config athena-system-config athena-tmux-config athena-vim-config athena-zsh figlet-fonts htb-tools myman nist-feed superbfetch-git toilet-fonts
+RUN pacman -Syu --noconfirm --needed athena-neofetch-config athena-nvchad athena-powershell-config athena-system-config athena-tmux-config athena-vim-config athena-zsh figlet-fonts htb-tools myman nist-feed superbfetch-git toilet-fonts
 
 #######################################################
 ###                    GUI TOOLS                    ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed armcord-git athena-alacritty-config athena-blue-eyes-theme athena-firefox-config athena-gnome-config athena-kitty-config athena-neofetch-config athena-theme-tweak athena-vscodium-themes athena-welcome bless chatgpt-desktop-bin cyberchef-electron edex-ui-bin gnome-characters gnome-control-center gnome-menus gnome-shell-extensions gnome-system-monitor gnome-terminal gnome-themes-extra gnome-tweaks gtk-engine-murrine hexedit malcontent nautilus networkmanager networkmanager-openvpn octopi onionshare polkit-gnome qgnomeplatform-qt5 qgnomeplatform-qt6 qqc2-desktop-style reflector tor-browser xdg-desktop-portal xdg-desktop-portal-gnome
+RUN pacman -Syu --noconfirm --needed armcord-git athena-alacritty-config athena-blue-eyes-theme athena-firefox-config athena-gnome-config athena-kitty-config athena-theme-tweak athena-vscodium-themes athena-welcome bless chatgpt-desktop-bin cyberchef-electron edex-ui-bin gnome-characters gnome-control-center gnome-menus gnome-shell-extensions gnome-system-monitor gnome-terminal gnome-themes-extra gnome-tweaks gtk-engine-murrine hexedit malcontent nautilus networkmanager networkmanager-openvpn octopi onionshare polkit-gnome qgnomeplatform-qt5 qgnomeplatform-qt6 qqc2-desktop-style reflector tor-browser xdg-desktop-portal xdg-desktop-portal-gnome
 
 #######################################################
 ###                 GNOME EXTENSIONS                ###
