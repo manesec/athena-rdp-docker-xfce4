@@ -140,7 +140,7 @@ RUN sed -i "s/<allow_any>auth_admin_keep<\/allow_any>/<allow_any>yes<\/allow_any
 RUN sed -i 's/\/usr\/bin\/bash/\/usr\/bin\/zsh/g' /usr/share/athena-gnome-config/dconf-shell.ini
 RUN sed -i 's/\/usr\/bin\/bash/\/usr\/bin\/zsh/g' /etc/skel/.local/share/applications/*
 RUN sed -i 's/Bash/Zsh/g' /etc/skel/.local/share/applications/*
-RUN sed -i "s/source ~\/.bash_aliases/source ~\/.bash_aliases\nsource ~\/.bashrc/g" /etc/skel/.zshrc
+RUN sed -i "s/source ~\/.bash_aliases/source ~\/.bash_aliases\nsource ~\/.bashrc no-repeat-flag/g" /etc/skel/.zshrc
 RUN sed -i "s/  neofetch/#  neofetch/g" /etc/skel/.zshrc
 
 # Create and configure user
