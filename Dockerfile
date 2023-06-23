@@ -30,38 +30,32 @@ RUN pacman -Syu --noconfirm --needed accountsservice dialog gcc inetutils make m
 ###                   DEPENDENCIES                  ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed exa hwloc ocl-icd pocl
+RUN pacman -Syu --noconfirm --needed exa pocl
 
 #######################################################
 ###                      FONTS                      ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-kr-fonts gnu-free-fonts ttf-jetbrains-mono ttf-jetbrains-mono-nerd
+RUN pacman -Syu --noconfirm --needed adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-kr-fonts gnu-free-fonts noto-fonts-emoji ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 
 #######################################################
 ###                    UTILITIES                    ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed asciinema bash-completion bashtop bat bc blesh-git cmatrix cowsay cron downgrade eog espeakup figlet file-roller fortune-mod git gnome-keyring imagemagick jdk-openjdk jq lib32-glibc lolcat lsd nano-syntax-highlighting ncdu neofetch nyancat openbsd-netcat openvpn orca p7zip paru pfetch polkit powershell-bin python-pywhat reflector sl textart tidy tk tmux toilet tree ufw unzip vim vnstat wget which xclip xcp xmlstarlet zoxide
+RUN pacman -Syu --noconfirm --needed asciinema bash-completion bashtop bat bc blesh-git cmatrix cowsay cron downgrade eog espeakup figlet file-roller fortune-mod git gnome-keyring imagemagick jdk-openjdk jq lib32-glibc lolcat lsd myman nano-syntax-highlighting ncdu neofetch nyancat openbsd-netcat openvpn orca p7zip paru pfetch polkit powershell-bin python-pywhat reflector sl superbfetch-git textart tidy tk tmux toilet-fonts tree ufw unzip vim vnstat wget which xclip xcp xmlstarlet zoxide
 RUN pacman -Syu --noconfirm --needed openssl shellinabox
 
 #######################################################
 ###                ATHENA REPOSITORY                ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed athena-neofetch-config athena-nvchad athena-powershell-config athena-system-config athena-tmux-config athena-vim-config athena-zsh figlet-fonts htb-tools myman nist-feed superbfetch-git toilet-fonts
+RUN pacman -Syu --noconfirm --needed athena-neofetch-config athena-nvchad athena-powershell-config athena-system-config athena-tmux-config athena-vim-config athena-zsh figlet-fonts htb-tools nist-feed
 
 #######################################################
 ###                    GUI TOOLS                    ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed armcord-git athena-alacritty-config athena-blue-eyes-theme athena-firefox-config athena-gnome-config athena-kitty-config athena-theme-tweak athena-vscodium-themes athena-welcome bless chatgpt-desktop-bin cyberchef-electron edex-ui-bin gnome-characters gnome-control-center gnome-menus gnome-shell-extensions gnome-system-monitor gnome-terminal gnome-themes-extra gnome-tweaks gtk-engine-murrine hexedit malcontent nautilus networkmanager networkmanager-openvpn octopi onionshare polkit-gnome qgnomeplatform-qt5 qgnomeplatform-qt6 qqc2-desktop-style reflector tor-browser xdg-desktop-portal xdg-desktop-portal-gnome
-
-#######################################################
-###                 GNOME EXTENSIONS                ###
-#######################################################
-
-RUN pacman -Syu --noconfirm --needed gnome-shell-extension-appindicator-git gnome-shell-extension-aylur-widgets-git gnome-shell-extension-compiz-windows-effect-git gnome-shell-extension-desktop-icons-ng-git gnome-shell-extension-fly-pie-git gnome-shell-extension-hide-activities-git gnome-shell-extension-logo-menu-git gnome-shell-extension-pop-shell-git gnome-shell-extension-remove-app-menu-git gnome-shell-extension-top-bar-organizer gnome-shell-extension-ubuntu-dock-git gnome-shell-extension-vitals-git
+RUN pacman -Syu --noconfirm --needed armcord-git athena-alacritty-config athena-blue-eyes-theme athena-firefox-config athena-gnome-config athena-kitty-config athena-theme-tweak athena-vscodium-themes athena-welcome bless chatgpt-desktop-bin cyberchef-electron edex-ui-bin gtk-engine-murrine hexedit nautilus networkmanager networkmanager-openvpn octopi onionshare reflector tor-browser
 
 # Install xrdp and xorgxrdp from AUR.
 # - Unlock gnome-keyring automatically for xrdp login.
