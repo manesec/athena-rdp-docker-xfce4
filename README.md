@@ -194,6 +194,8 @@ For copy and paste text from the host to the environment, copy a string, then, o
 Clone this repository, edit `Dockerfile` and then run `docker build` as usual:
 
 ```
+git clone https://github.com/Athena-OS/athena-rdp-docker.git
+cd athena-rdp-docker
 docker build --tag 'custom-athena-rdp:latest' .
 ```
 
