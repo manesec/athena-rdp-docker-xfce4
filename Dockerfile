@@ -123,11 +123,9 @@ RUN sed -i "s/source ~\/.bash_aliases/source ~\/.bash_aliases\nsource ~\/.bashrc
 RUN sed -i "s/  neofetch/#  neofetch/g" /etc/skel/.zshrc
 
 # Create and configure user
-RUN groupadd sudo && \
-  useradd  \
+RUN useradd  \
   --shell /bin/zsh \
-  -g users \
-  -G sudo,lp,network,power,sys,wheel \
+  -G lp,rfkill,sys,wheel \
   --badname \
   -u "$PUID" \
   -d "/home/$PUSER" \
