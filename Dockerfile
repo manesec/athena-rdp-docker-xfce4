@@ -34,7 +34,7 @@ RUN pacman -Syu --noconfirm --needed openssl shellinabox
 ###                ATHENA REPOSITORY                ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed athena-neofetch-config athena-nvchad athena-powershell-config athena-system-config athena-tmux-config athena-vim-config athena-zsh figlet-fonts htb-toolkit nist-feed
+RUN pacman -Syu --noconfirm --needed athena-neofetch-config athena-nvim-config athena-powershell-config athena-system-config athena-tmux-config athena-vim-config athena-zsh figlet-fonts htb-toolkit nist-feed
 
 #######################################################
 ###                    GUI TOOLS                    ###
