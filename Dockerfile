@@ -40,7 +40,7 @@ RUN pacman -Syu --noconfirm --needed athena-neofetch-config athena-nvim-config a
 ###                    GUI TOOLS                    ###
 #######################################################
 
-RUN pacman -Syu --noconfirm --needed armcord-git athena-alacritty-config athena-blue-eyes-theme athena-cyber-hub athena-firefox-config athena-gnome-config athena-kitty-config athena-theme-tweak athena-vscodium-themes athena-welcome bless chatgpt-desktop-bin cyberchef-electron edex-ui-bin gtk-engine-murrine hexedit nautilus networkmanager networkmanager-openvpn octopi onionshare reflector torbrowser-launcher
+RUN pacman -Syu --noconfirm --needed armcord-git athena-alacritty-config athena-cyber-hub athena-firefox-config athena-gnome-config athena-kitty-config athena-samurai-theme athena-theme-tweak athena-vscodium-themes athena-welcome bless chatgpt-desktop-bin cyberchef-electron edex-ui-bin gtk-engine-murrine hexedit nautilus networkmanager networkmanager-openvpn octopi onionshare reflector torbrowser-launcher
 
 # Install xrdp and xorgxrdp from AUR.
 # - Unlock gnome-keyring automatically for xrdp login.
