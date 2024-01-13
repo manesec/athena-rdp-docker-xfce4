@@ -8,7 +8,7 @@ accountsservice dialog gcc inetutils make man-db man-pages most nano nbd net-too
 eza pocl \
 noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
 asciinema bash-completion bashtop bat bc blesh-git cmatrix cowsay cron downgrade espeakup figlet-fonts file-roller fortune-mod git imagemagick jdk-openjdk jq lib32-glibc lolcat lsd myman nano-syntax-highlighting ncdu neofetch nyancat openbsd-netcat openvpn orca p7zip paru pfetch polkit powershell-bin python-pywhat reflector sl superbfetch-git textart tidy tk tmux toilet-fonts tree ufw unzip vim vnstat wget which xclip xcp xmlstarlet zoxide \
-openssl shellinabox \
+openssl \
 athena-neofetch-config athena-nvim-config athena-powershell-config athena-system-config athena-tmux-config athena-vim-config athena-zsh htb-toolkit nist-feed \
 athena-alacritty-config athena-cyber-hub athena-firefox-config athena-gnome-config athena-kitty-config athena-samurai-theme athena-theme-tweak athena-vscodium-themes athena-welcome bless chatgpt-desktop-bin cyberchef-electron gtk-engine-murrine hexedit networkmanager networkmanager-openvpn octopi onionshare torbrowser-launcher \
 check imlib2 tigervnc libxrandr fuse libfdk-aac nasm xorg-server xorg-server-devel xorgxrdp xrdp
