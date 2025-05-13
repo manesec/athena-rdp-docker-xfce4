@@ -7,10 +7,10 @@ RUN pacman -Syyu --noconfirm --needed \
 accountsservice bind dialog fakeroot gcc inetutils make man-db man-pages most nano nbd net-tools netctl pv rsync sudo timelineproject-hg vi \
 eza pocl \
 noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
-asciinema bash-completion bashtop bat bc blesh-git cmatrix cowsay cron downgrade espeakup fastfetch figlet-fonts file-roller fortune-mod git imagemagick jdk-openjdk jq lib32-glibc lolcat lsd myman nano-syntax-highlighting ncdu neofetch nvchad-git nyancat openbsd-netcat openvpn orca p7zip paru pfetch polkit powershell-bin python-pywhat reflector sl superbfetch-git textart tidy tk tmux toilet-fonts tree ufw unzip vim vnstat wget which xclip xmlstarlet zoxide \
+asciinema bash-completion bashtop bat bc blesh-git cmatrix cowsay cron downgrade espeakup fastfetch file-roller fortune-mod git imagemagick jq lib32-glibc lolcat lsd myman nano-syntax-highlighting ncdu nvchad-git openbsd-netcat openvpn orca p7zip polkit powershell-bin reflector sl tmux tree ufw unzip vnstat wget which xclip xmlstarlet zoxide \
 openssl \
-athena-powershell-config athena-config athena-tmux-config athena-vim-config athena-zsh htb-toolkit nist-feed \
-athena-alacritty-config athena-cyber-hub athena-firefox-config athena-gnome-config athena-kitty-config athena-temple-theme athena-vscodium-themes athena-welcome bless cyberchef-electron gtk-engine-murrine hexedit networkmanager networkmanager-openvpn octopi onionshare torbrowser-launcher \
+athena-config athena-powershell-config athena-tmux-config athena-zsh htb-toolkit nist-feed \
+athena-firefox-config athena-gnome-config athena-kitty-config athena-temple-theme athena-vscodium-themes athena-welcome bless cyberchef-electron gtk-engine-murrine hexedit networkmanager networkmanager-openvpn onionshare torbrowser-launcher \
 check imlib2 tigervnc libxrandr fuse libfdk-aac nasm xorg-server xorg-server-devel xorgxrdp xrdp
 
 RUN systemctl enable xrdp.service
