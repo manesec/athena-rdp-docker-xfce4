@@ -9,7 +9,7 @@ eza pocl \
 noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
 asciinema bash-completion bashtop bat bc blesh-git cmatrix cowsay cron downgrade espeakup fastfetch file-roller fortune-mod git imagemagick jq lib32-glibc lolcat lsd myman nano-syntax-highlighting ncdu nvchad-git openbsd-netcat openvpn orca p7zip polkit powershell-bin reflector sl tmux tree ufw unzip vnstat wget which xclip xmlstarlet zoxide \
 openssl \
-athena-config athena-powershell-config athena-tmux-config athena-zsh htb-toolkit nist-feed \
+athena-bash athena-config athena-powershell-config athena-tmux-config athena-zsh htb-toolkit nist-feed \
 athena-firefox-config athena-gnome-config athena-kitty-config athena-temple-theme athena-vscodium-themes athena-welcome bless cyberchef-electron gtk-engine-murrine hexedit networkmanager networkmanager-openvpn onionshare torbrowser-launcher \
 check imlib2 tigervnc libxrandr fuse libfdk-aac nasm xorg-server xorg-server-devel xorgxrdp xrdp
 
@@ -84,7 +84,7 @@ RUN sed -i "s/<allow_any>auth_admin_keep<\/allow_any>/<allow_any>yes<\/allow_any
 RUN sed -i 's/\/usr\/bin\/bash/\/usr\/bin\/zsh/g' /usr/share/athena-gnome-config/dconf-shell.ini
 RUN sed -i 's/\/usr\/bin\/bash/\/usr\/bin\/zsh/g' /usr/share/applications/*
 RUN sed -i 's/Bash/Zsh/g' /usr/share/applications/*
-RUN sed -i "s/  neofetch/#  neofetch/g" /etc/skel/.zshrc
+RUN sed -i "s/  fastfetch/#  fastfetch/g" /etc/skel/.zshrc
 
 # Create and configure user
 RUN useradd  \
