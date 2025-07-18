@@ -41,4 +41,4 @@ fi
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
 # Start the GNOME session
-exec gnome-session
+exec xfce4-session

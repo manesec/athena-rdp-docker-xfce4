@@ -10,8 +10,8 @@ noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
 asciinema bash-completion bashtop bat bc blesh-git cmatrix cowsay cron downgrade espeakup fastfetch file-roller fortune-mod git imagemagick jq lib32-glibc lolcat lsd myman nano-syntax-highlighting ncdu nvchad-git openbsd-netcat openvpn orca p7zip polkit powershell-bin reflector sl tmux tree ufw unzip vnstat wget which xclip xmlstarlet zoxide \
 openssl \
 athena-bash athena-config athena-powershell-config athena-tmux-config athena-zsh htb-toolkit nist-feed \
-athena-firefox-config athena-gnome-config athena-kitty-config athena-temple-design athena-vscodium-themes athena-welcome bless cyberchef-electron gtk-engine-murrine hexedit networkmanager networkmanager-openvpn onionshare torbrowser-launcher \
-check imlib2 tigervnc libxrandr fuse libfdk-aac nasm xorg-server xorg-server-devel xorgxrdp xrdp
+athena-firefox-config athena-xfce-refined athena-xfce-base athena-kitty-config athena-temple-design athena-welcome bless cyberchef-electron gtk-engine-murrine hexedit networkmanager networkmanager-openvpn onionshare torbrowser-launcher \
+check imlib2 tigervnc libxrandr fuse libfdk-aac nasm xorg-server xorg-server-devel xorgxrdp xrdp vim athena-graphite-theme xfce4-systemload-plugin
 
 RUN systemctl enable xrdp.service
 
@@ -19,11 +19,11 @@ RUN systemctl enable xrdp.service
 # - https://github.com/neutrinolabs/xrdp/issues/1684
 # - GNOME Keyring asks for password at login.
 RUN cd /tmp && \
-  wget --progress=dot:giga 'https://github.com/matt335672/pam_close_systemd_system_dbus/archive/f8e6a9ac7bdbae7a78f09845da4e634b26082a73.zip' && \
-  unzip f8e6a9ac7bdbae7a78f09845da4e634b26082a73.zip && \
-  cd /tmp/pam_close_systemd_system_dbus-f8e6a9ac7bdbae7a78f09845da4e634b26082a73 && \
-  make install && \
-  rm -fr /tmp/pam_close_systemd_system_dbus-f8e6a9ac7bdbae7a78f09845da4e634b26082a73
+ wget --progress=dot:giga 'https://github.com/matt335672/pam_close_systemd_system_dbus/archive/f8e6a9ac7bdbae7a78f09845da4e634b26082a73.zip' && \
+ unzip f8e6a9ac7bdbae7a78f09845da4e634b26082a73.zip && \
+ cd /tmp/pam_close_systemd_system_dbus-f8e6a9ac7bdbae7a78f09845da4e634b26082a73 && \
+ make install && \
+ rm -fr /tmp/pam_close_systemd_system_dbus-f8e6a9ac7bdbae7a78f09845da4e634b26082a73
 
 # Clean Pacman cache
 RUN pacman -Scc --noconfirm
@@ -81,7 +81,7 @@ RUN xrdp-keygen xrdp /etc/xrdp/rsakeys.ini
 RUN sed -i "s/<allow_any>auth_admin_keep<\/allow_any>/<allow_any>yes<\/allow_any>/g" /usr/share/polkit-1/actions/org.freedesktop.login1.policy
 
 # /etc/skel editing
-RUN sed -i 's/\/usr\/bin\/bash/\/usr\/bin\/zsh/g' /usr/share/athena-gnome-config/dconf-shell.ini
+#RUN sed -i 's/\/usr\/bin\/bash/\/usr\/bin\/zsh/g' /usr/share/athena-gnome-config/dconf-shell.ini
 RUN sed -i 's/\/usr\/bin\/bash/\/usr\/bin\/zsh/g' /usr/share/applications/*
 RUN sed -i 's/Bash/Zsh/g' /usr/share/applications/*
 RUN sed -i "s/  fastfetch/#  fastfetch/g" /etc/skel/.zshrc
